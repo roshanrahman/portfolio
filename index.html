@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Roshan's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
   </head>
@@ -50,7 +55,7 @@
         <p>Enough talk, now let me show you a few of my projects:</p>
       </section>
       <section id="projects">
-        <div class="project">
+        <div class="project" onclick="openTab('quick-writer');">
           <div class="image">
             <img src="assets/quick-writer.png" alt="" />
           </div>
@@ -65,7 +70,7 @@
           </div>
         </div>
         <div class="project">
-          <div class="image">
+          <div class="image" href="hello" onclick="openTab('cs-entry');">
             <img src="assets/cs-entry.png" alt="" />
           </div>
           <div class="desc">
@@ -78,12 +83,14 @@
             <p>Made with Vue.js, uses Vuetify as UI framework</p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" onclick="openTab('cs-talkers');">
           <div class="image">
-            <img src="assets/cs-talkers.png" alt="" />
+            <img src="assets/cs-talkers.png" alt="CS Talkers image" />
           </div>
           <div class="desc">
-            <h1 class="title">CS Talkers</h1>
+            <h1 class="title">
+              CS Talkers
+            </h1>
             <p>
               I was one of the Android developers on a mobile system for
               communication between faculty and students.
@@ -92,9 +99,9 @@
             <p>Wrote Kotlin code, made UI Designs</p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" onclick="openTab('calculator');">
           <div class="image">
-            <img src="assets/calculator.png" alt="" />
+            <img src="assets/calculator.png" alt="Calculator image" />
           </div>
           <div class="desc">
             <h1 class="title">Calculator</h1>
@@ -107,7 +114,12 @@
             <p>Written in pure JavaScript</p>
           </div>
         </div>
-        <div class="github">You'll find more good stuff on my GitHub</div>
+        <div
+          class="github"
+          onclick="window.open('https://www.github.com/roshanrahman', '_blank');"
+        >
+          You'll find more good stuff on my GitHub
+        </div>
       </section>
       <section id="resume">
         <p>
@@ -134,13 +146,13 @@
         <p>You can also contact me through my profiles on:</p>
         <div class="links">
           <a href="https://www.github.com/roshanrahman">
-            <button>GitHub</button></a
+            <button><i class="fa fa-github"></i>GitHub</button></a
           >
-          <a href="https://www.github.com/roshanrahman">
-            <button>LinkedIn</button></a
+          <a href="https://www.linkedin.com/in/roshanrahman6399">
+            <button><i class="fa fa-linkedin"></i>LinkedIn</button></a
           >
-          <a href="https://www.github.com/roshanrahman">
-            <button>AngelList</button></a
+          <a href="https://angel.co/roshan-rahman">
+            <button><i class="fa fa-angellist"></i>AngelList</button></a
           >
         </div>
         <p>Have a great day, visitor!</p>
@@ -148,10 +160,40 @@
       <footer>
         <p>
           Portfolio made from scratch. You can view the source code
-          <a href="">here.</a>
+          <a href="https://github.com/roshanrahman/portfolio">here.</a>
         </p>
         <p>Thank you for visiting!</p>
       </footer>
     </div>
   </body>
+  <script>
+    function openTab(mStr) {
+      switch (mStr) {
+        case "quick-writer":
+          window.open(
+            "https://www.github.com/roshanrahman/quick-writer-app",
+            "_blank"
+          );
+          break;
+        case "cs-entry":
+          window.open(
+            "https://github.com/roshanrahman/vue-leadership",
+            "_blank"
+          );
+          break;
+        case "cs-talkers":
+          window.open(
+            "https://gitlab.com/attendance-app-vrss/attendance-app-android-native",
+            "_blank"
+          );
+          break;
+        case "calculator":
+          window.open(
+            "https://roshanrahman.github.io/the-odin-project/calculator/index.html",
+            "_blank"
+          );
+          break;
+      }
+    }
+  </script>
 </html>
